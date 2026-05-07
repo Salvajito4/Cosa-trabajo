@@ -1,0 +1,11 @@
+from collections import defaultdict
+personas = [Nicolas, Irene, Fernando]
+tareas = [Descargar, Descomprimir, Ejecutar]
+
+asignaciones = defaultdict(list)
+
+for i, tarea in enumerate(tareas):
+    persona = personas[i % len(personas)]
+    asignaciones[persona].append(tarea)
+
+print(dict(asignaciones))
